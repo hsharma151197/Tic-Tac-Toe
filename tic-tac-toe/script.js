@@ -1,9 +1,10 @@
-var flag,counter;
+var flag,counter,block,x,blockArr,flagArr,rowcolArr,rowcol;
 counter = 0;
-var rowcol = [];
+rowcol = [];
 flag = false;
-var rowcolArr = [];
-var flagArr = [true, true, true, true, true, true, true, true, true];
+rowcolArr = [];
+flagArr = [true, true, true, true, true, true, true, true, true];
+blockArr = [];
 
 init();
 
@@ -14,6 +15,7 @@ function init(){
             counter++;
         }
     }
+    counter = 0;
     listeners();
 }
 
@@ -32,18 +34,25 @@ function view(counter){
     if(flag===false){
         console.log(counter);
         rowcolArr[counter].textContent = 'X';
+        x = rowcolArr[counter];
         flag = true;
-        result();
+        result(x);
     }
     else{
         console.log(counter);
         rowcolArr[counter].textContent = 'O';
+        x = rowcolArr[counter];
         flag = false;
-        result();
+        result(x);
     }
     
 }
 
-function result(){
-       
+function result(block){
+    blockArr[counter] = block.className;
+    console.log(blockArr[counter]);
+    for(var i=0; i<blockArr.length; i++){
+        
+    }
+    counter++;
 }
