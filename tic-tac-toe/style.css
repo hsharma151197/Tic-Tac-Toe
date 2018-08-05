@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+.clearfix::after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+body{
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4));
+}
+
+
+.title{
+    background-color: antiquewhite;
+    color: brown;
+    text-align: center;
+    height: 50px;
+    font-size: 350%;
+}
+
+.parent-block{
+    padding: 125px 500px;
+}
+
+.parent-block *{
+    height: 100px;
+    width: 32%;
+    display: block;
+    border: 1px solid #222;
+    background-color: aquamarine;
+    float: left;
+    font-size: 104px;
+    text-align: center;
+}
+
